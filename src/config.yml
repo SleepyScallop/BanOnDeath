@@ -1,0 +1,12 @@
+# How long should the player be banned for when they die?
+# Timer works in seconds, 
+# 86400 seconds in a day.
+# 43200 seconds in 12 hours.
+# 3600 seconds in 1 hour.
+BanTimer: 86400
+
+# What should the ban reason be when the player dies?
+BanReason: "Died"
+
+# What should be said to the player when they are kicked upon dying?
+BanKickReason: "You have been banned for 24 hours cause you died!"

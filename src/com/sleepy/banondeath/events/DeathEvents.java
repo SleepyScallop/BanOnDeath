@@ -19,8 +19,8 @@ public class DeathEvents implements Listener {
         @EventHandler
     public void onPlayerDeath(PlayerDeathEvent event) {
         Player p = (Player) event.getEntity();
-        Bukkit.getBanList(BanList.Type.NAME).addBan(p.getDisplayName(), "Died", Date.from(Instant.now().plusSeconds(86400)), null);
-        p.kickPlayer("You have been banned for 24 hours cause you died!");
+        Bukkit.getBanList(BanList.Type.NAME).addBan(p.getDisplayName(), pl.getConfig().getString("BanReason"), Date.from(Instant.now().plusSeconds(pl.getConfig().getInt("BanTimer"))), null);
+        p.kickPlayer(pl.getConfig().getString("BanKickReason"));
         }
     
 }
